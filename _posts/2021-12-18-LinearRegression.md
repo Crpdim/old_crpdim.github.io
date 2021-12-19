@@ -81,7 +81,7 @@ ax.plot(xCopy[:,1],yHat)
 plt.show()
 ```
 
-
+![line](https://github.com/Crpdim/crpdim.github.io/raw/main/screenshots/line.png)
 
 便得到了最佳拟合直线
 
