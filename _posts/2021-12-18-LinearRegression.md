@@ -1,6 +1,7 @@
 ---
 title: 线性回归
 tags: 深度学习
+mathjax: true
 article_header:
   type: cover
   image:
