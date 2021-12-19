@@ -5,7 +5,7 @@ mathjax: true
 article_header:
   type: cover
   image:
-    src: /screenshots/mountain.png
+    src: /mountain.png
 ---
 
 
