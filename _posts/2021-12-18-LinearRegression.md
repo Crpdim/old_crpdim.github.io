@@ -82,6 +82,8 @@ plt.show()
 
 ![](/style/photos/linear-regression1.png)
 
+![test](https://github.com/Crpdim/crpdim.github.io/raw/main/picture/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-12-19%20171729.png)
+
 便得到了最佳拟合直线
 
 ## 局部加权线性回归
