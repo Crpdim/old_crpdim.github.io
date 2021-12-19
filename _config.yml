@@ -37,9 +37,9 @@ author:
   type      : # "person" (default), "organization"
   name      : Crpdim
   url       :
-  avatar    : head.jpg # path or url of avatar image (square)
+  avatar    : https://github.com/Crpdim/crpdim.github.io/row/main/head.jpg # path or url of avatar image (square)
   bio       : I am an amazing person.
-  email     :
+  email     : crpdim7@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -118,7 +118,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider:  # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
