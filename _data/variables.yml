@@ -27,7 +27,7 @@ default:
       show_readmore: false
       show_info: false
     show_title: true
-    show_edit_on_github: true
+    show_edit_on_github: false
     show_date: true
     show_tags: true
     show_author_profile: false
@@ -36,7 +36,7 @@ default:
     sharing: false
     comment: true
     license: false
-    pageview: true
+    pageview: false
     search: default
 
 sources:
