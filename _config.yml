@@ -22,7 +22,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : GGG's BLOG
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  A website with awesome stories.
 
 
 ## => Language and Timezone
@@ -55,8 +55,8 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
-repository_tree: master
+repository: Crpdim/Crpdim.github.io
+repository_tree: main
 
 
 ## => Paths
@@ -118,7 +118,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider:  # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: valine # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -137,8 +137,8 @@ comments:
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
   valine:
-    app_id      : # LeanCloud App id
-    app_key     : # LeanCloud App key
+    app_id      : NjKaaL3Ypwivyw0cfqVn4anV-gzGzoHsz # LeanCloud App id
+    app_key     : qwMI9IL0gdYXmXy5bDfa5Jml # LeanCloud App key
     placeholder : # Prompt information
     visitor     : # false (default)
     meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
@@ -151,9 +151,9 @@ pageview:
 
   ## Leancloud
   leancloud:
-    app_id    : # LeanCloud App id
-    app_key   : # LeanCloud App key
-    app_class : # LeanCloud App class
+    app_id    : NjKaaL3Ypwivyw0cfqVn4anV-gzGzoHsz # LeanCloud App id
+    app_key   : qwMI9IL0gdYXmXy5bDfa5Jml # LeanCloud App key
+    app_class : GGG # LeanCloud App class
 
 
 ## => Search
