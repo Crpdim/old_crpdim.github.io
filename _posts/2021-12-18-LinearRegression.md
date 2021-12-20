@@ -2,10 +2,13 @@
 title: 线性回归
 tags: 深度学习
 mathjax: true
+mode: immersive
+header:
+  theme: dark
 article_header:
   type: cover
   image:
-    src: /mountain.png
+    src: /escape.png
 ---
 
 
