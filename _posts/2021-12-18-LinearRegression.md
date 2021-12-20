@@ -8,7 +8,7 @@ header:
 article_header:
   type: cover
   image:
-    src: /escape.png
+    src: /escape.jpg
 ---
 
 
