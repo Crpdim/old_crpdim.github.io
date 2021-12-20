@@ -3,6 +3,8 @@ title: 线性回归
 tags: 深度学习
 mathjax: true
 mode: immersive
+comment: true
+pageview: true
 key: A0001
 header:
   theme: dark
