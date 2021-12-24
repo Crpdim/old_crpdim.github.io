@@ -1,0 +1,21 @@
+---
+layout: article
+title: Robot Framework
+mode: immersive
+header:
+  theme: dark
+article_header:
+  type: cover
+  image:
+    src: /cover2.jpg
+
+---
+
+# Robot Framework
+
+>  Robot Framework是一款python编写的功能自动化测试框架。具备良好的可扩展性，支持关键字驱动，可以同时测试多种类型的客户端或者接口，可以进行分布式测试执行。主要用于轮次很多的验收测试和验收测试驱动开发（ATDD）。
+
+## 特点：
+
+- 入门快（门槛低）：对于编程能力比较薄弱的测试人员也能快速入手
+- 丰富的开源库包支持：大家都知道Selenium自动化只能在web下进行，而Robot Framework几乎可以在任何测试场景下使用（导入相应的扩展包）
