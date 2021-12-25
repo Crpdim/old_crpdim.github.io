@@ -11,7 +11,7 @@ header:
 article_header:
   type: cover
   image:
-    src: /escape.jpg
+    src: /screenshots/Apple_Park.png
 ---
 
 
