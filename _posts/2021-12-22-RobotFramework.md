@@ -11,7 +11,7 @@ header:
 article_header:
   type: cover
   image:
-    src: /screenshots/Apple_Park.png
+    src: /Apple_Park.png
 ---
 
 
