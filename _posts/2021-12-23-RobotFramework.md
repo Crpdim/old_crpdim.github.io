@@ -44,7 +44,7 @@ Robot Framework 是一个通用的、独立于应用程序和技术的框架。�
 
 在左边的Test Suites窗口中可以看到创建的第一个项目，右键该项目，点击New Suite，创建一个Suite，再在Suite中创建第一个测试。
 
-分别在project和suite中导入测试需要的库：
+分别在project和suite中导入测试需要的库（表格中库的名称为红色时，说明导入失败，没有找到该库）：
 
 ![](https://github.com/Crpdim/crpdim.github.io/raw/main/screenshots/page1.png)
 
