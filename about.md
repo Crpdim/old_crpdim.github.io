@@ -33,4 +33,4 @@ article_header:
     src: /Moon.jpg
 ---
 
-# This is a website with awesome stories.
+This is a website with awesome stories.
