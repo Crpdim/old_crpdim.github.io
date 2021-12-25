@@ -38,9 +38,25 @@ Robot Framework 是一个通用的、独立于应用程序和技术的框架。�
 
 直接 `pip install robotframework-ride`就ok了
 
-## 运行第一个测试
+## 浏览器打开测试
 
 进入python环境的Scrips目录，运行`python ride.py`,就可以打开程序窗口，点击窗口菜单栏的File中的New Project即可创建一个Project，创建新项目的方法和其他软件大同小异。
 
 在左边的Test Suites窗口中可以看到创建的第一个项目，右键该项目，点击New Suite，创建一个Suite，再在Suite中创建第一个测试。
+
+向表格里写入第一个脚本：
+
+![](https://github.com/Crpdim/crpdim.github.io/raw/main/screenshots/project1.png)
+
+> 1. 使用Chrome访问Url
+> 2. 等待5s
+> 3. 最大化浏览器窗口
+> 4. 向id=user的文本框输入123
+> 5. 剩下的同理。。。
+
+接下来进入run页面，点击Start按钮或按F8 便可以执行脚本，并生成测试报告。（*使用RobotFramework打开谷歌浏览器需要安装**对应版本**的chromedriver.exe，其他浏览器同理。）
+
+![](https://github.com/Crpdim/crpdim.github.io/raw/main/screenshots/result.png)
+
+可以通过点击Log查看
 
