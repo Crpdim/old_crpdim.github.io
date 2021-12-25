@@ -33,3 +33,14 @@ Robot Framework 是一个通用的、独立于应用程序和技术的框架。�
 
 - 入门快（门槛低）：对于编程能力比较薄弱的测试人员也能快速入手
 - 丰富的开源库包支持：大家都知道Selenium自动化只能在web下进行，而Robot Framework几乎可以在任何测试场景下使用（导入相应的扩展包）
+
+## 安装
+
+直接 `pip install robotframework-ride`就ok了
+
+## 运行第一个测试
+
+进入python环境的Scrips目录，运行`python ride.py`,就可以打开程序窗口，点击窗口菜单栏的File中的New Project即可创建一个Project，创建新项目的方法和其他软件大同小异。
+
+在左边的Test Suites窗口中可以看到创建的第一个项目，右键该项目，点击New Suite，创建一个Suite，再在Suite中创建第一个测试。
+
