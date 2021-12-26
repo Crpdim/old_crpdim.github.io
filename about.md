@@ -1,5 +1,6 @@
 ---
 layout: article
+mode: immersive
 titles:
   # @start locale config
   en      : &EN       About
@@ -24,8 +25,14 @@ titles:
   fr-LU   : *FR
   # @end locale config
 key: page-about
+header:
+  theme: dark
+article_header:
+  type: cover
+  image:
+    src: /Moon.jpg
 ---
 
-![about](https://github.com/Crpdim/crpdim.github.io/raw/main/screenshots/Moon.jpg)
 
 
+## This is a website with awesome stories.
