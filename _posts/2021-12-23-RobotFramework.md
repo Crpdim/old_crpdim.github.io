@@ -14,10 +14,8 @@ article_header:
     src: /Apple_Park.png
 ---
 
-
 * content
-{:toc}
-
+  {:toc}
 
 # Robot Framework
 
