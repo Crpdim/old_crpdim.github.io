@@ -11,7 +11,7 @@ header:
 article_header:
   type: cover
   image:
-    src: /men1.jpg
+    src: /Fly1.jpg
 
 ---
 
