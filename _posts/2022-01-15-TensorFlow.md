@@ -31,11 +31,61 @@ TensorFlow依赖两个主要的工具包——Protocol Buffer 和 Bazel，当然
 
 ### 安装
 
-conda环境安装：
+**conda环境安装：**
 
 ```
 conda install -c anaconda tensorflow
 ```
+
+**m1安装： **
+
+如果没有使用conda环境，按下面步骤就可以正常安装
+
+如果是用的anaconda，最好换成miniforge3（一下午的教训）
+
+（Anaconda现在还没完美支持M1！！！绕过检查安装成功也无法运行）
+
+```
+1.下载tensorflow
+https://github.com/apple/tensorflow_macos/releases
+选择tensorflow_macos-0.1alpha3.tar.gz
+
+2.下载anaconda_arm
+https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
+
+3.安装miniforge3(安装后重启终端)
+/bin/bash ./Miniforge3-MacOSX-arm64.sh
+
+4.创建虚拟环境
+conda create -n tensorflow_env python=3.8
+# conda activate tensorflow_env 激活虚拟环境
+# conda deactivate 退出虚拟环境
+
+5.查看Python路径
+which python
+
+6.安装tensorflow
+tar -zxvf tensorflow_macos-0.1alpha3.tar.gz -C /Users/username/Local/Envs #解压到这个文件夹
+libs="/Users/username/Local/Envs/tensorflow_macos/arm64" #username为当前用户文件夹名称
+env="/Users/username/miniforge3/envs/tensorflow_env" #username为当前用户文件夹名称
+pip install --upgrade pip wheel setuptools cached-property six
+pip install --upgrade -t "$env/lib/python3.8/site-packages/" --no-dependencies --force "$libs/grpcio-1.33.2-cp38-cp38-macosx_11_0_arm64.whl"
+pip install --upgrade -t "$env/lib/python3.8/site-packages/" --no-dependencies --force "$libs/h5py-2.10.0-cp38-cp38-macosx_11_0_arm64.whl"
+pip install --upgrade -t "$env/lib/python3.8/site-packages/" --no-dependencies --force "$libs/numpy-1.18.5-cp38-cp38-macosx_11_0_arm64.whl"
+pip install --upgrade -t "$env/lib/python3.8/site-packages/" --no-dependencies --force "$libs/tensorflow_addons_macos-0.1a3-cp38-cp38-macosx_11_0_arm64.whl"
+pip install absl-py astunparse flatbuffers gast google_pasta keras_preprocessing opt_einsum protobuf tensorflow_estimator termcolor typing_extensions wrapt wheel tensorboard typeguard
+pip install --upgrade -t "$env/lib/python3.8/site-packages/" --no-dependencies --force "$libs/tensorflow_macos-0.1a3-cp38-cp38-macosx_11_0_arm64.whl"
+```
+
+安装完成，import tensorflow，在当前环境中运行
+
+``` python
+import tensorflow
+```
+
+检查安装是否成功。
+
+
 
 ## 入门
 
