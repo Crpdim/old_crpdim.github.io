@@ -15,9 +15,7 @@ article_header:
 
 ---
 
-* content
-  
-  {:toc}
+[TOC]
 
 # Tensorflow
 
