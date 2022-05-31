@@ -1,23 +1,23 @@
-# InorderTree(C语言实现)
+# ThreadTree(C语言实现)
 
 ## 节点定义
 
 ```c
-typedef struct BTNode {
+typedef struct ThreadNode {
     char val;
     int l_tag, r_tag;
-    struct BTNode* left, *right;
-}BTNode, *BTTree;
+    struct ThreadNode* left, *right;
+}ThreadNode, *ThreadTree;
 ```
 
 ## 二叉树建立
 
 ```c
-void creatTree(BTTree* t) {         //二叉树建立
+void creatTree(ThreadTree* t) {         //二叉树建立
     char c;
     scanf("%c", &c);
     if (c != '#') {
-        (*t) = (BTTree)malloc(sizeof (BTNode));
+        (*t) = (ThreadTree)malloc(sizeof (ThreadNode));
         (*t)->val = c;
         (*t)->l_tag = 0;
         (*t)->r_tag = 0;
@@ -32,7 +32,8 @@ void creatTree(BTTree* t) {         //二叉树建立
 ## 中序线索化
 
 ```c
-void InTherad(BTTree* tree) {
+ThreadNode* pre = NULL;
+void InTherad(ThreadTree* tree) {
     if ((*tree) == NULL) return;
     InTherad(&(*tree)->left);
     if ((*tree)->left == NULL) {
@@ -47,7 +48,7 @@ void InTherad(BTTree* tree) {
     InTherad(&(*tree)->right);
 }
 
-void creatInTherad(BTTree* tree) {  //中序线索化
+void creatInTherad(ThreadTree* tree) {  //中序线索化
     InTherad(tree);
     pre->right = NULL;
     pre->r_tag = 1;
@@ -57,13 +58,13 @@ void creatInTherad(BTTree* tree) {  //中序线索化
 ## 寻找后继节点
 
 ```c
-BTNode *FirstNode(BTTree* tree) {   //寻找树中序遍历首节点
-    BTNode* vis = (*tree);
+ThreadNode *FirstNode(ThreadTree* tree) {   //寻找树中序遍历首节点
+    ThreadNode* vis = (*tree);
     while (vis->l_tag == 0) vis = vis->left;
     return vis;
 }
 
-BTNode *NextNode(BTNode* node) {    //寻找后继节点
+ThreadNode *NextNode(ThreadNode* node) {    //寻找后继节点
     if (node->r_tag == 0) return FirstNode(&(node->right));
     return node->right;
 }
@@ -72,9 +73,9 @@ BTNode *NextNode(BTNode* node) {    //寻找后继节点
 ## 利用线索二叉树中序遍历
 
 ```c
-void T_Inorder(BTTree *tree) {      //使用线索二叉树中序遍历
+void T_Inorder(ThreadTree *tree) {      //使用线索二叉树中序遍历
     printf("线索二叉树正序中序遍历\n");
-    BTNode* vis = FirstNode(tree);
+    ThreadNode* vis = FirstNode(tree);
     while (vis != NULL) {
         printf("%c ", vis->val);
         vis = NextNode(vis);
@@ -86,13 +87,13 @@ void T_Inorder(BTTree *tree) {      //使用线索二叉树中序遍历
 ## 寻找前驱节点
 
 ```c
-BTNode *LastNode(BTTree* tree) {    //线索二叉树最后一个节点
-    BTNode *vis = (*tree);
+ThreadNode *LastNode(ThreadTree* tree) {    //线索二叉树最后一个节点
+    ThreadNode *vis = (*tree);
     while (vis->r_tag == 0) vis = vis->right;
     return vis;
 }
 
-BTNode *PreNode(BTNode* node) {     //线索二叉树前驱节点
+ThreadNode *PreNode(ThreadNode* node) {     //线索二叉树前驱节点
     if (node->l_tag == 0) return LastNode(&(node->left));
     return node->left;
 }
@@ -101,9 +102,9 @@ BTNode *PreNode(BTNode* node) {     //线索二叉树前驱节点
 ## 逆序中序遍历二叉搜索树
 
 ```c
-void revInOrder(BTTree* tree) {     //逆序中序遍历
+void revInOrder(ThreadTree* tree) {     //逆序中序遍历
     printf("线索二叉树逆序中序遍历\n");
-    BTNode *vis = LastNode(tree);
+    ThreadNode *vis = LastNode(tree);
     while (vis != NULL) {
         printf("%c ", vis->val);
         vis = PreNode(vis);
@@ -116,7 +117,7 @@ void revInOrder(BTTree* tree) {     //逆序中序遍历
 
 ```c
 int main() {
-    BTTree tree;    //Node指针
+    ThreadTree tree;
     creatTree(&tree);
     creatInTherad(&tree);
     T_Inorder(&tree);
