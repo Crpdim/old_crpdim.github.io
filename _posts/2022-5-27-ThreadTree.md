@@ -29,6 +29,61 @@ void creatTree(ThreadTree* t) {         //二叉树建立
 }
 ```
 
+## 先序线索化
+
+```c
+void PreThread(ThreadTree *tree) {
+    if ((*tree) == NULL) return;
+    ThreadNode *temp = (*tree);
+    if (temp->left == NULL) {
+        temp->left = pre;
+        temp->l_tag = 1;
+    }
+    if (pre != NULL && pre->right == NULL) {
+        pre->right = temp;
+        pre->r_tag = 1;
+    }
+    pre = temp;
+    if (temp->l_tag == 0)
+        PreThread(&(temp->left));
+    if (temp->r_tag == 0)
+        PreThread(&(temp->right));
+}
+
+void creatPreThread(ThreadTree *tree) {     //建立先序线索二叉树
+    PreThread(tree);
+    pre->right = NULL;
+    pre->r_tag = 1;
+}
+```
+
+### 先序线索后继节点
+
+```c
+ThreadNode *Pre_NextNode(ThreadNode *node) { //先序线索二叉树找后继
+    if (node->l_tag == 0) {
+        return node->left;
+    }
+    return node->right;
+}   //先序遍历找后继
+```
+
+### 先序线索二叉树先序遍历
+
+```c
+void T_PreOrder(ThreadTree *tree) {         //先序线索二叉树先序遍历
+    ThreadNode *vis = (*tree);
+    printf("先序线索二叉树的先序遍历\n");
+    while (vis != NULL) {
+        printf("%c ", vis->val);
+        vis = Pre_NextNode(vis);
+    }
+    printf("\n");
+}   //先序线索二叉树先序遍历
+```
+
+
+
 ## 中序线索化
 
 ```c
@@ -55,7 +110,7 @@ void creatInTherad(ThreadTree* tree) {  //中序线索化
 }
 ```
 
-## 寻找后继节点
+### 寻找后继节点
 
 ```c
 ThreadNode *FirstNode(ThreadTree* tree) {   //寻找树中序遍历首节点
@@ -70,7 +125,7 @@ ThreadNode *NextNode(ThreadNode* node) {    //寻找后继节点
 }
 ```
 
-## 利用线索二叉树中序遍历
+### 利用线索二叉树中序遍历
 
 ```c
 void T_Inorder(ThreadTree *tree) {      //使用线索二叉树中序遍历
@@ -84,7 +139,7 @@ void T_Inorder(ThreadTree *tree) {      //使用线索二叉树中序遍历
 }
 ```
 
-## 寻找前驱节点
+### 寻找前驱节点
 
 ```c
 ThreadNode *LastNode(ThreadTree* tree) {    //线索二叉树最后一个节点
@@ -99,7 +154,7 @@ ThreadNode *PreNode(ThreadNode* node) {     //线索二叉树前驱节点
 }
 ```
 
-## 逆序中序遍历二叉搜索树
+### 逆序中序遍历二叉搜索树
 
 ```c
 void revInOrder(ThreadTree* tree) {     //逆序中序遍历
