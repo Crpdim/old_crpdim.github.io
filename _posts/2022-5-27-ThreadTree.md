@@ -1,3 +1,25 @@
+---
+title: 线索二叉树
+tags: 数据结构
+mathjax: true
+mode: immersive
+comment: true
+pageview: true
+key: A0021
+header:
+  theme: dark
+article_header:
+  type: cover
+  image:
+    src: /escape.jpg
+
+---
+
+
+* content
+{:toc}
+
+
 # ThreadTree(C语言实现)
 
 ## 节点定义

@@ -1,3 +1,25 @@
+---
+title: 线性表
+tags: 数据结构
+mathjax: true
+mode: immersive
+comment: true
+pageview: true
+key: A0020
+header:
+  theme: dark
+article_header:
+  type: cover
+  image:
+    src: /escape.jpg
+
+---
+
+
+* content
+{:toc}
+
+
 # 线性表 --Linear List
 
 [TOC]
