@@ -5,7 +5,7 @@ mathjax: true
 mode: immersive
 comment: true
 pageview: true
-key: A0011
+key: A2272
 header:
   theme: dark
 article_header:
