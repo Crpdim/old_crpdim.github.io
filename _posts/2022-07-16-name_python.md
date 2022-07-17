@@ -1,3 +1,32 @@
+---
+title: python命名规范
+tags: python
+mathjax: true
+mode: immersive
+comment: true
+pageview: true
+key: A2277
+header:
+  theme: dark
+article_header:
+  type: cover
+  image:
+    src: //photos/mounts.jpg
+
+
+
+
+---
+
+
+* content
+{:toc}
+
+
+
+
+
+
 # Python变量命名规范
 
 ## 1. 不要与内置函数取同样名
@@ -42,5 +71,11 @@
 
 ### 单个下划线 （ _ )
 
-表示不使用的变量 ` for _ in range():`
+表示不使用的变量 
+
+```python
+for _ in range(10):
+```
+
+
 
